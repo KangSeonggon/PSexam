@@ -1,0 +1,41 @@
+T = int(input())
+# x,y= [],[]
+templist = []
+ans = []
+for i in range(T):
+    x,y = map(int,input().split())
+    z = y-x # x y 두 지점 차이
+    cnt=1
+    if z == 1:
+        ans.append(1)
+        break
+    else:
+        while z > 0:
+            cnt+=1
+            z-=2*cnt
+            if z == cnt+1:
+                print(cnt,z)
+                ans.append(2*cnt+1)
+                break
+            elif z <= 0:
+                print(cnt,z)
+                ans.append(2*cnt)
+                break
+            cnt+=1
+#1233321
+for i in ans:
+    print(i)
+
+    # for j in range(1, y-x+1):
+    #     temp = (j*j+j)/2
+    #     templist.append(temp)
+    #     if z < temp:
+    #         # print("----------")
+    #         # print(z)
+    #         # print(temp)
+    #         # print(templist)
+    #         # print(j)
+    #         # print(cnt+1)
+    #         ans.append(cnt+1)
+    #         break
+    #     cnt+=1
