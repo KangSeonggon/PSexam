@@ -20,5 +20,4 @@ while True:
         print(-1)
         # print(tempset)
         break
-
-    
+        print(1)
