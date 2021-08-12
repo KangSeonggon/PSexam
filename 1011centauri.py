@@ -9,21 +9,20 @@ for i in range(T):
     if z == 1:
         ans.append(1)
         break
-    else:
-        while z > 0:
-            cnt+=1
-            z-=2*cnt
-            print('--')
-            print(cnt,z)
-            if z == 0:
-                ans.append(2*cnt)
-                break
-            elif z == cnt+1 or z == cnt:
-                ans.append(2*cnt+1)
-                break
-            elif z < 0:
-                ans.append(2*cnt)
-                break
+    while z > 0:
+        cnt+=1
+        z-=2*cnt
+        print('--')
+        print(cnt,z)
+        if z == 0:
+            ans.append(2*cnt)
+            break
+        elif z == cnt+1 or z == cnt:
+            ans.append(2*cnt+1)
+            break
+        elif z < 0:
+            ans.append(2*cnt)
+            break
             
 #1233321
 for i in ans:
