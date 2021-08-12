@@ -1,1 +1,1 @@
-# PSexercise
+# PS exercise
