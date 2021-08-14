@@ -5,23 +5,25 @@ ans = []
 for i in range(T):
     x,y = map(int,input().split())
     z = y-x # x y 두 지점 차이
-    cnt=1
+    cnt=0
     if z == 1:
         ans.append(1)
         break
-    else:
-        while z > 0:
-            cnt+=1
-            z-=2*cnt
-            if z == cnt+1:
-                print(cnt,z)
-                ans.append(2*cnt+1)
-                break
-            elif z <= 0:
-                print(cnt,z)
-                ans.append(2*cnt)
-                break
-            cnt+=1
+    while z > 0:
+        cnt+=1
+        z-=2*cnt
+        print('--')
+        print(cnt,z)
+        if z == 0:
+            ans.append(2*cnt)
+            break
+        elif z == cnt+1 or z == cnt:
+            ans.append(2*cnt+1)
+            break
+        elif z < 0:
+            ans.append(2*cnt)
+            break
+            
 #1233321
 for i in ans:
     print(i)
