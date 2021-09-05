@@ -1,15 +1,12 @@
 min = int(input())
 max = int(input())
-# temp = []
-temp = [True]*max
-
-
-
+temp = []
+breaker = True
 for i in range(min,max+1):
     tmp = 0
     for j in range(2,i):
         if i%j == 0:
-            continue
+            break
         else:
             tmp+=1
     if tmp + 2 == i:
